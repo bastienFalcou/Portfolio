@@ -20,7 +20,7 @@ enum APIError: Error {
 
 protocol APIClient {
     var baseURL: String { get }
-    func perform(request: Request, path: String, properties: [String: Any], completion: @escaping ((String?, Error?) -> (Void)))
+    func perform(request: Request, path: String, properties: [String: Any]?, completion: @escaping ((String?, Error?) -> (Void)))
 }
 
 final class PortfolioAPIClient: APIClient {
@@ -31,7 +31,7 @@ final class PortfolioAPIClient: APIClient {
         self.baseURL = baseURL
     }
 
-    func perform(request: Request, path: String, properties: [String : Any], completion: @escaping ((String?, Error?) -> (Void))) {
+    func perform(request: Request, path: String, properties: [String : Any]?, completion: @escaping ((String?, Error?) -> (Void))) {
         guard let url = URL(string: baseURL + path) else {
             completion(nil, APIError.invalidURL)
             return
