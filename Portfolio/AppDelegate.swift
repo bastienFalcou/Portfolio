@@ -12,13 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let apiClient = PortfolioAPIClient(baseURL: "https://gist.github.com/bastienFalcou/")
-        apiClient.perform(request: .get, path: "58330c105dd8adce733706f73b707cf4", properties: nil) { string, error in
-            if let error = error {
-                print("An error occurred: \(error)")
-                return
+        let sourceService = PortfolioSourceService(apiClient: apiClient)
+
+        sourceService.getPortfolioSources { result in
+            switch result {
+            case .failure(let error): print(error)
+            case .success(let value): print(value)
             }
-            print(string ?? "<Empty String>")
         }
+
         return true
     }
 }

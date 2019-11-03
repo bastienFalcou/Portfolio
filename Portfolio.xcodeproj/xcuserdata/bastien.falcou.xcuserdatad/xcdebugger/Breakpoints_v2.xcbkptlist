@@ -3,6 +3,7 @@
    uuid = "9C958731-BD90-4B9F-89AA-E04B198ADD5F"
    type = "1"
    version = "2.0">
+<<<<<<< HEAD
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
@@ -34,6 +35,38 @@
             endingLineNumber = "17"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E732174E-030C-4F44-9B2B-C8A74BE6ADAE - e2a39d96fa4fd93e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Portfolio.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Portfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bastien.falcou/Documents/Portfolio/Portfolio/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  uuid = "E732174E-030C-4F44-9B2B-C8A74BE6ADAE - dc01e250c56f324c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Portfolio.Result&lt;Swift.Array&lt;Portfolio.Source&gt;&gt;) -&gt; () in Portfolio.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "Portfolio"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bastien.falcou/Documents/Portfolio/Portfolio/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "122">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -53,4 +86,6 @@
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
+=======
+>>>>>>> ddac580... WIP2
 </Bucket>
