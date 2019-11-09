@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let apiClient = PortfolioAPIClient(baseURL: "https://gist.github.com/bastienFalcou/")
-        let sourceService = PortfolioSourceService(apiClient: apiClient)
+        let sourceService = PortfolioSourceAPIService(apiClient: apiClient)
 
         sourceService.getPortfolioSources { result in
             switch result {

@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension Source: Serializable {
-    static func decode(_ data: Data) throws -> Source {
-        return try JSONDecoder().decode(Source.self, from: data)
+extension PortfolioSource: Serializable {
+    static func decode(_ data: Data) throws -> PortfolioSource {
+        return try JSONDecoder().decode(PortfolioSource.self, from: data)
     }
 }

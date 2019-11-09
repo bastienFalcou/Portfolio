@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Source: Codable {
+struct PortfolioSource: Codable {
     let name: String
     let source: Int
     let currency: Int
