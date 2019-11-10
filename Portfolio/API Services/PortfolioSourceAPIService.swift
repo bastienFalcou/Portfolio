@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class PortfolioSourceService: SourceService {
+final class PortfolioSourceAPIService: SourceAPIService {
     private let apiClient: APIClient
 
     init(apiClient: APIClient) {

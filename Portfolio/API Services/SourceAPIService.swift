@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol SourceService {
+protocol SourceAPIService {
     func getPortfolioSources(completion: @escaping ((Result<[Source]>) -> Void))
 }
