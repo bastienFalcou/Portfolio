@@ -9,5 +9,11 @@
 import Foundation
 
 final class ServiceFactory {
+    lazy var localPersistenceService: LocalPersistenceService = {
+        return PortfolioLocalPersistenceService()
+    }()
 
+    lazy var userService: UserService = {
+        return PortfolioUserService(localPersistenceService: localPersistenceService)
+    }()
 }

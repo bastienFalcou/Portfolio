@@ -11,6 +11,11 @@
 		1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE54237787CD00195347 /* APIServiceFactory.swift */; };
 		1320FE572377898E00195347 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE562377898E00195347 /* HomeViewModel.swift */; };
 		1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5923778AC000195347 /* ViewControllerFactory.swift */; };
+		1320FE5C23778EE000195347 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5B23778EE000195347 /* UserService.swift */; };
+		1320FE5E23778EEC00195347 /* PortfolioUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5D23778EEC00195347 /* PortfolioUserService.swift */; };
+		1320FE6023778F0E00195347 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* File.swift */; };
+		1320FE622378BD2A00195347 /* LocalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE612378BD2A00195347 /* LocalPersistenceService.swift */; };
+		1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE632378BDCF00195347 /* PortfolioLocalPersistenceService.swift */; };
 		1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99D236F67AD00FF0D86 /* AppDelegate.swift */; };
 		1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */; };
 		1372F9A2236F67AD00FF0D86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9A1236F67AD00FF0D86 /* ContentView.swift */; };
@@ -46,6 +51,11 @@
 		1320FE54237787CD00195347 /* APIServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceFactory.swift; sourceTree = "<group>"; };
 		1320FE562377898E00195347 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1320FE5923778AC000195347 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		1320FE5B23778EE000195347 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1320FE5D23778EEC00195347 /* PortfolioUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUserService.swift; sourceTree = "<group>"; };
+		1320FE5F23778F0E00195347 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1320FE612378BD2A00195347 /* LocalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPersistenceService.swift; sourceTree = "<group>"; };
+		1320FE632378BDCF00195347 /* PortfolioLocalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioLocalPersistenceService.swift; sourceTree = "<group>"; };
 		1372F99A236F67AD00FF0D86 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372F99D236F67AD00FF0D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +109,10 @@
 		1320FE50237786BC00195347 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1320FE5B23778EE000195347 /* UserService.swift */,
+				1320FE5D23778EEC00195347 /* PortfolioUserService.swift */,
+				1320FE612378BD2A00195347 /* LocalPersistenceService.swift */,
+				1320FE632378BDCF00195347 /* PortfolioLocalPersistenceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -190,6 +204,7 @@
 		1372F9C8236F751D00FF0D86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1320FE5F23778F0E00195347 /* File.swift */,
 				1372F9C9236F752500FF0D86 /* Source.swift */,
 			);
 			path = Models;
@@ -322,6 +337,7 @@
 				1372F9C1236F6BFA00FF0D86 /* SourceAPIService.swift in Sources */,
 				1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */,
 				1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */,
+				1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */,
 				1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */,
 				1372F9CF236F773400FF0D86 /* Serializable.swift in Sources */,
 				1372F9D3236F96C800FF0D86 /* PortfolioSourceAPIService.swift in Sources */,
@@ -330,11 +346,15 @@
 				1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */,
 				1372F9CA236F752500FF0D86 /* Source.swift in Sources */,
 				1372F9C3236F6C0D00FF0D86 /* APIClient.swift in Sources */,
+				1320FE5C23778EE000195347 /* UserService.swift in Sources */,
 				1372F9A2236F67AD00FF0D86 /* ContentView.swift in Sources */,
 				1372F9CC236F756F00FF0D86 /* Result.swift in Sources */,
+				1320FE6023778F0E00195347 /* File.swift in Sources */,
 				1372F9DA236F974600FF0D86 /* Request.swift in Sources */,
 				1372F9C7236F724100FF0D86 /* HomeViewController.swift in Sources */,
 				1372F9D1236F7FE800FF0D86 /* Source+Serialization.swift in Sources */,
+				1320FE5E23778EEC00195347 /* PortfolioUserService.swift in Sources */,
+				1320FE622378BD2A00195347 /* LocalPersistenceService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
