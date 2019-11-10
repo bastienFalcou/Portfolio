@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1320FE53237787BF00195347 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE52237787BF00195347 /* ServiceFactory.swift */; };
+		1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE54237787CD00195347 /* APIServiceFactory.swift */; };
+		1320FE572377898E00195347 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE562377898E00195347 /* HomeViewModel.swift */; };
+		1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5923778AC000195347 /* ViewControllerFactory.swift */; };
 		1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99D236F67AD00FF0D86 /* AppDelegate.swift */; };
 		1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */; };
 		1372F9A2236F67AD00FF0D86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9A1236F67AD00FF0D86 /* ContentView.swift */; };
@@ -17,7 +21,7 @@
 		1372F9C1236F6BFA00FF0D86 /* SourceAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C0236F6BFA00FF0D86 /* SourceAPIService.swift */; };
 		1372F9C3236F6C0D00FF0D86 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C2236F6C0D00FF0D86 /* APIClient.swift */; };
 		1372F9C7236F724100FF0D86 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C6236F724100FF0D86 /* HomeViewController.swift */; };
-		1372F9CA236F752500FF0D86 /* PortfolioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C9236F752500FF0D86 /* PortfolioSource.swift */; };
+		1372F9CA236F752500FF0D86 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C9236F752500FF0D86 /* Source.swift */; };
 		1372F9CC236F756F00FF0D86 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9CB236F756F00FF0D86 /* Result.swift */; };
 		1372F9CF236F773400FF0D86 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9CE236F773400FF0D86 /* Serializable.swift */; };
 		1372F9D1236F7FE800FF0D86 /* Source+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9D0236F7FE800FF0D86 /* Source+Serialization.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1320FE52237787BF00195347 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		1320FE54237787CD00195347 /* APIServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceFactory.swift; sourceTree = "<group>"; };
+		1320FE562377898E00195347 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1320FE5923778AC000195347 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		1372F99A236F67AD00FF0D86 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372F99D236F67AD00FF0D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +60,7 @@
 		1372F9C0236F6BFA00FF0D86 /* SourceAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceAPIService.swift; sourceTree = "<group>"; };
 		1372F9C2236F6C0D00FF0D86 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		1372F9C6236F724100FF0D86 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1372F9C9236F752500FF0D86 /* PortfolioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioSource.swift; sourceTree = "<group>"; };
+		1372F9C9236F752500FF0D86 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		1372F9CB236F756F00FF0D86 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		1372F9CE236F773400FF0D86 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		1372F9D0236F7FE800FF0D86 /* Source+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Source+Serialization.swift"; sourceTree = "<group>"; };
@@ -95,6 +103,24 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		1320FE512377876800195347 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				1320FE52237787BF00195347 /* ServiceFactory.swift */,
+				1320FE54237787CD00195347 /* APIServiceFactory.swift */,
+				1320FE5923778AC000195347 /* ViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		1320FE582377899400195347 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1320FE562377898E00195347 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		1372F991236F67AD00FF0D86 = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +144,14 @@
 			children = (
 				1372F99D236F67AD00FF0D86 /* AppDelegate.swift */,
 				1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */,
-				1372F9CD236F770500FF0D86 /* Serialization */,
-				1372F9C8236F751D00FF0D86 /* Models */,
+				1320FE4F2377861500195347 /* ViewControllers */,
+				1320FE582377899400195347 /* ViewModels */,
+				1320FE512377876800195347 /* Factories */,
 				1320FE50237786BC00195347 /* Services */,
 				1372F9BF236F6BBE00FF0D86 /* API Services */,
 				1372F9D4236F96F000FF0D86 /* Networking */,
-				1320FE4F2377861500195347 /* ViewControllers */,
+				1372F9CD236F770500FF0D86 /* Serialization */,
+				1372F9C8236F751D00FF0D86 /* Models */,
 				1372F9A1236F67AD00FF0D86 /* ContentView.swift */,
 				1372F9A3236F67AF00FF0D86 /* Assets.xcassets */,
 				1372F9A8236F67AF00FF0D86 /* LaunchScreen.storyboard */,
@@ -162,7 +190,7 @@
 		1372F9C8236F751D00FF0D86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1372F9C9236F752500FF0D86 /* PortfolioSource.swift */,
+				1372F9C9236F752500FF0D86 /* Source.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,14 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1320FE572377898E00195347 /* HomeViewModel.swift in Sources */,
 				1372F9D8236F972400FF0D86 /* PortfolioAPIClient.swift in Sources */,
 				1372F9C1236F6BFA00FF0D86 /* SourceAPIService.swift in Sources */,
+				1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */,
 				1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */,
 				1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */,
 				1372F9CF236F773400FF0D86 /* Serializable.swift in Sources */,
 				1372F9D3236F96C800FF0D86 /* PortfolioSourceAPIService.swift in Sources */,
 				1372F9D6236F970B00FF0D86 /* APIError.swift in Sources */,
-				1372F9CA236F752500FF0D86 /* PortfolioSource.swift in Sources */,
+				1320FE53237787BF00195347 /* ServiceFactory.swift in Sources */,
+				1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */,
+				1372F9CA236F752500FF0D86 /* Source.swift in Sources */,
 				1372F9C3236F6C0D00FF0D86 /* APIClient.swift in Sources */,
 				1372F9A2236F67AD00FF0D86 /* ContentView.swift in Sources */,
 				1372F9CC236F756F00FF0D86 /* Result.swift in Sources */,

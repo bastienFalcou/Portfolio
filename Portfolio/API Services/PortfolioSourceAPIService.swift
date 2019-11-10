@@ -15,8 +15,8 @@ final class PortfolioSourceAPIService: SourceAPIService {
         self.apiClient = apiClient
     }
 
-    func getPortfolioSources(completion: @escaping ((Result<[PortfolioSource]>) -> Void)) {
-        apiClient.perform(request: .get, path: "58330c105dd8adce733706f73b707cf4/raw/ec97563a3f39c02b6390307a93ec529f5d26fbe7/portfolio-example.json", properties: nil) { (result: Result<PortfolioSourcesContainer>) in
+    func getPortfolioSources(completion: @escaping ((Result<[Source]>) -> Void)) {
+        apiClient.perform(request: .get, path: "58330c105dd8adce733706f73b707cf4/raw/ec97563a3f39c02b6390307a93ec529f5d26fbe7/portfolio-example.json", properties: nil) { (result: Result<SourcesContainer>) in
             switch result {
             case .success(let value): completion(.success(value: value.sources))
             case .failure(let error): completion(.failure(error: error))
@@ -25,12 +25,12 @@ final class PortfolioSourceAPIService: SourceAPIService {
     }
 }
 
-private struct PortfolioSourcesContainer: Codable {
-    let sources: [PortfolioSource]
+private struct SourcesContainer: Codable {
+    let sources: [Source]
 }
 
-extension PortfolioSourcesContainer: Serializable {
-    static func decode(_ data: Data) throws -> PortfolioSourcesContainer {
-        return try JSONDecoder().decode(PortfolioSourcesContainer.self, from: data)
+extension SourcesContainer: Serializable {
+    static func decode(_ data: Data) throws -> SourcesContainer {
+        return try JSONDecoder().decode(SourcesContainer.self, from: data)
     }
 }
