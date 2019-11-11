@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        apiServiceFactory.sourceAPIService.getPortfolioSources()
+            .catch { _ in Just([]) }
+            .sink(receiveCompletion: { completion in
+                print(".sink() received the completion: ", String(describing: completion))
+            }, receiveValue: { value in
+                print(".sink() received value: ", value)
+            })
+
         return true
     }
 }

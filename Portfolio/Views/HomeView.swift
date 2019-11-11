@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Hello World")
+                .font(.title)
+            HStack {
+                Text("This is so cool")
+                Spacer()
+                Text("Something else")
+            }
+        }
+        .padding()
     }
 }
 

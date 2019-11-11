@@ -7,22 +7,20 @@
 //
 
 import Foundation
+import Combine
 
 final class HomeViewModel {
     private let sourceAPIService: SourceAPIService
 
-    var sources: [Source] = []
+    private(set) var sources: [Source] = []
 
     init(sourceAPIService: SourceAPIService) {
         self.sourceAPIService = sourceAPIService
     }
 
     func fetchSources() {
-        sourceAPIService.getPortfolioSources { [weak self] result in
-            switch result {
-            case .failure(let error): print(error)
-            case .success(let value): self?.sources = value
-            }
-        }
+        sourceAPIService.getPortfolioSources()
+            .catch { _ in Just([]) }
+            .assign(to: \.sources, on: self)
     }
 }

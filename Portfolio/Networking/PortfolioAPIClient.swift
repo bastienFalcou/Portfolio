@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 final class PortfolioAPIClient: APIClient {
     private let defaultSession = URLSession(configuration: .default)
@@ -16,24 +17,13 @@ final class PortfolioAPIClient: APIClient {
         self.baseURL = baseURL
     }
 
-    func perform<T: Serializable>(request: Request, path: String, properties: [String: Any]?, completion: @escaping ((Result<T>) -> (Void))) {
+    func perform<T: Serializable>(request: Request, path: String, properties: [String: Any]?) -> AnyPublisher<T, Error> {
         guard let url = URL(string: baseURL + path) else {
-            completion(.failure(error: APIError.invalidURL))
-            return
+            return Fail(error: APIError.invalidURL).eraseToAnyPublisher()
         }
-        defaultSession.dataTask(with: url) { data, response, error in
-            if let error = error {
-                return completion(.failure(error: error))
-            }
-            guard let data = data else {
-                return completion(.failure(error: APIError.emptyResponse))
-            }
-            do {
-                let result = try T.decode(data)
-                return completion(.success(value: result))
-            } catch {
-                return completion(.failure(error: error))
-            }
-        }.resume()
+        return defaultSession.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .tryMap { try T.decode($0) }
+            .eraseToAnyPublisher()
     }
 }

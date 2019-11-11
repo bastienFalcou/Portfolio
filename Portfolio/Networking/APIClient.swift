@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Combine
 
 protocol APIClient {
     var baseURL: String { get }
-    func perform<T: Serializable>(request: Request, path: String, properties: [String: Any]?, completion: @escaping ((Result<T>) -> (Void)))
+    func perform<T: Serializable>(request: Request, path: String, properties: [String: Any]?) -> AnyPublisher<T, Error>
 }
