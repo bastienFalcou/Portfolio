@@ -17,15 +17,28 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Hello World")
-                .font(.title)
-            HStack {
-                Text("This is so cool")
-                Spacer()
-                Text("Something else")
+            if viewModel.sources.isEmpty {
+              emptySection
+            } else {
+              sourcesSection
             }
         }
         .padding()
+    }
+
+    var emptySection: some View {
+      Section {
+        Text("No results")
+          .foregroundColor(.gray)
+      }
+    }
+
+    var sourcesSection: some View {
+      Section {
+        ForEach(viewModel.sources, id: \.name) { source in
+            SourceRow(viewModel: SourceRowViewModel(source: source))
+        }
+      }
     }
 }
 
