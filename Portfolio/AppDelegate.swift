@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let apiServiceFactory = self.apiServiceFactory
         apiServiceFactory.sourceAPIService.getPortfolioSources()
+            .receive(on: DispatchQueue.main)
             .catch { _ in Just([]) }
             .sink(receiveCompletion: { completion in
                 print(".sink() received the completion: ", String(describing: completion))

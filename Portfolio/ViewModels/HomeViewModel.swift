@@ -20,6 +20,7 @@ final class HomeViewModel {
 
     func fetchSources() {
         sourceAPIService.getPortfolioSources()
+            .receive(on: DispatchQueue.main)
             .catch { _ in Just([]) }
             .assign(to: \.sources, on: self)
     }
