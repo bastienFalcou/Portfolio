@@ -6,7 +6,7 @@
 //  Copyright © 2019 Bastien Falcou. All rights reserved.
 //
 
-import UIKit
+import SwiftUI
 
 final class ViewControllerFactory {
     private let serviceFactory: ServiceFactory
@@ -17,8 +17,8 @@ final class ViewControllerFactory {
         self.apiServiceFactory = apiServiceFactory
     }
 
-//    public func home() -> HomeViewController {
-//        let viewModel = HomeViewModel(sourceAPIService: apiServiceFactory.sourceAPIService)
-//        return HomeViewController(viewModel: viewModel)
-//    }
+    public func home() -> ContentView {
+        let viewModel = HomeViewModel(sourceAPIService: apiServiceFactory.sourceAPIService)
+        return ContentView(viewModel: viewModel)
+    }
 }

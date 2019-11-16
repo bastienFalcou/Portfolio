@@ -8,11 +8,13 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
-final class HomeViewModel {
+final class HomeViewModel: ObservableObject, Identifiable {
     private let sourceAPIService: SourceAPIService
+    private var disposables = Set<AnyCancellable>()
 
-    private(set) var sources: [Source] = []
+    @Published private(set) var sources: [Source] = []
 
     init(sourceAPIService: SourceAPIService) {
         self.sourceAPIService = sourceAPIService
@@ -23,5 +25,6 @@ final class HomeViewModel {
             .receive(on: DispatchQueue.main)
             .catch { _ in Just([]) }
             .assign(to: \.sources, on: self)
+            .store(in: &disposables)
     }
 }

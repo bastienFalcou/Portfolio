@@ -9,6 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: HomeViewModel
+
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Hello World")
@@ -20,11 +26,5 @@ struct ContentView: View {
             }
         }
         .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
