@@ -59,8 +59,10 @@ struct ContentView_Previews: PreviewProvider {
             Source(name: "Stocks", source: 1, currency: 0, amount: 1000)
         ]
         let viewFactory = ViewFactory(serviceFactory: ServiceFactory(),
-                                                apiServiceFactory: APIServiceFactory())
+                                      apiServiceFactory: APIServiceFactory())
         return HomeView(viewModel: HomeViewModel(sourceAPIService: mockSourceAPIService),
                         viewFactory: viewFactory)
     }
 }
+
+
