@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-final class SourceRowViewModel {
+final class SourceDetailsViewModel: Identifiable {
     let source: Source
 
     init(source: Source) {

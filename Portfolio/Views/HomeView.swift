@@ -9,29 +9,35 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel: HomeViewModel
+    private var viewFactory: ViewFactory
 
-    init(viewModel: HomeViewModel) {
+    @ObservedObject private var viewModel: HomeViewModel
+
+    init(viewModel: HomeViewModel, viewFactory: ViewFactory) {
         self.viewModel = viewModel
+        self.viewFactory = viewFactory
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            if viewModel.sources.isEmpty {
-              emptySection
-            } else {
-              sourcesSection
+        NavigationView {
+            VStack(alignment: .leading, spacing: 10) {
+                if viewModel.sources.isEmpty {
+                  emptySection
+                } else {
+                  sourcesSection
+                }
             }
+            .navigationBarTitle("Portfolio")
         }
-        .padding()
-        .navigationBarTitle("Portfolio")
         .onAppear(perform: viewModel.fetchSources)
     }
 
     var sourcesSection: some View {
-      Section {
+      List {
         ForEach(viewModel.sources, id: \.name) { source in
-            SourceRow(viewModel: SourceRowViewModel(source: source))
+            NavigationLink(destination: self.viewFactory.sourceDetails(source: source)) {
+                SourceRow(viewModel: SourceRowViewModel(source: source))
+            }
         }
       }
     }
@@ -46,6 +52,17 @@ struct HomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel(sourceAPIService: MockSourceAPIService()))
+        let mockSourceAPIService = MockSourceAPIService()
+        mockSourceAPIService.sourcesResponse = [
+            Source(name: "Lloyds Bank", source: 0, currency: 0, amount: 8000),
+            Source(name: "Chase Bank", source: 0, currency: 0, amount: 120000),
+            Source(name: "Stocks", source: 1, currency: 0, amount: 1000)
+        ]
+        let viewFactory = ViewFactory(serviceFactory: ServiceFactory(),
+                                      apiServiceFactory: APIServiceFactory())
+        return HomeView(viewModel: HomeViewModel(sourceAPIService: mockSourceAPIService),
+                        viewFactory: viewFactory)
     }
 }
+
+

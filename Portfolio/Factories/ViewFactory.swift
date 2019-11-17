@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-final class ViewControllerFactory {
+final class ViewFactory {
     private let serviceFactory: ServiceFactory
     private let apiServiceFactory: APIServiceFactory
 
@@ -17,8 +17,13 @@ final class ViewControllerFactory {
         self.apiServiceFactory = apiServiceFactory
     }
 
-    public func home() -> HomeView {
+    func home() -> HomeView {
         let viewModel = HomeViewModel(sourceAPIService: apiServiceFactory.sourceAPIService)
-        return HomeView(viewModel: viewModel)
+        return HomeView(viewModel: viewModel, viewFactory: self)
+    }
+
+    func sourceDetails(source: Source) -> SourceDetailsView {
+        let viewModel = SourceDetailsViewModel(source: source)
+        return SourceDetailsView(viewModel: viewModel)
     }
 }
