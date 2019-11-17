@@ -16,14 +16,15 @@ struct HomeView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            if viewModel.sources.isEmpty {
-              emptySection
-            } else {
-              sourcesSection
+        NavigationView {
+            VStack(alignment: .leading, spacing: 10) {
+                if viewModel.sources.isEmpty {
+                  emptySection
+                } else {
+                  sourcesSection
+                }
             }
         }
-        .padding()
         .navigationBarTitle("Portfolio")
         .onAppear(perform: viewModel.fetchSources)
     }
