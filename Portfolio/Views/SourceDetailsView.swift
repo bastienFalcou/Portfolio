@@ -23,7 +23,7 @@ struct SourceDetailsView: View {
 
 struct SourceDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        let source = Source(name: "Name", source: 0, currency: 0, amount: 8000)
+        let source = Source(name: "Name", source: 0, currency: .dollars, amount: 8000)
         return SourceDetailsView(viewModel: SourceDetailsViewModel(source: source))
     }
 }

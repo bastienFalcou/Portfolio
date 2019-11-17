@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131003E62381F44E00BB2AFD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E52381F44E00BB2AFD /* Currency.swift */; };
+		131003E82381F4DD00BB2AFD /* Currency+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E72381F4DD00BB2AFD /* Currency+Serialization.swift */; };
 		1320FE53237787BF00195347 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE52237787BF00195347 /* ServiceFactory.swift */; };
 		1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE54237787CD00195347 /* APIServiceFactory.swift */; };
 		1320FE572377898E00195347 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE562377898E00195347 /* HomeViewModel.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131003E52381F44E00BB2AFD /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		131003E72381F4DD00BB2AFD /* Currency+Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currency+Serialization.swift"; sourceTree = "<group>"; };
 		1320FE52237787BF00195347 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		1320FE54237787CD00195347 /* APIServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceFactory.swift; sourceTree = "<group>"; };
 		1320FE562377898E00195347 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 			children = (
 				1320FE5F23778F0E00195347 /* File.swift */,
 				1372F9C9236F752500FF0D86 /* Source.swift */,
+				131003E52381F44E00BB2AFD /* Currency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			children = (
 				1372F9CE236F773400FF0D86 /* Serializable.swift */,
 				1372F9D0236F7FE800FF0D86 /* Source+Serialization.swift */,
+				131003E72381F4DD00BB2AFD /* Currency+Serialization.swift */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */,
 				1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */,
 				1338CE6D238081BB001F952E /* MockSourceAPIService.swift in Sources */,
+				131003E82381F4DD00BB2AFD /* Currency+Serialization.swift in Sources */,
+				131003E62381F44E00BB2AFD /* Currency.swift in Sources */,
 				1372F9CF236F773400FF0D86 /* Serializable.swift in Sources */,
 				1372F9D3236F96C800FF0D86 /* PortfolioSourceAPIService.swift in Sources */,
 				1372F9D6236F970B00FF0D86 /* APIError.swift in Sources */,

@@ -11,6 +11,6 @@ import Foundation
 struct Source: Codable {
     let name: String
     let source: Int
-    let currency: Int
+    let currency: Currency
     let amount: Int
 }

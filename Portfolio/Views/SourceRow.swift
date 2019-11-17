@@ -22,7 +22,7 @@ struct SourceRow: View {
 
         HStack {
             Text("\(viewModel.source.amount)")
-            Text("\(viewModel.source.currency)")
+            Text("\(viewModel.source.currency.rawValue)")
         }
       }
     }
@@ -35,14 +35,14 @@ struct SourceRow_Previews: PreviewProvider {
             SourceRow(viewModel: SourceRowViewModel(
                 source: Source(name: "Source Short Name",
                                source: 0,
-                               currency: 0,
+                               currency: .dollars,
                                amount: 8000)
                 )
             ).previewLayout(.fixed(width: 200, height: 120))
             SourceRow(viewModel: SourceRowViewModel(
                 source: Source(name: "Source With A Very Long name So Long It goes Out",
                                source: 1,
-                               currency: 0,
+                               currency: .dollars,
                                amount: 100000)
                 )
             ).previewLayout(.fixed(width: 350, height: 70))

@@ -54,9 +54,9 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let mockSourceAPIService = MockSourceAPIService()
         mockSourceAPIService.sourcesResponse = [
-            Source(name: "Lloyds Bank", source: 0, currency: 0, amount: 8000),
-            Source(name: "Chase Bank", source: 0, currency: 0, amount: 120000),
-            Source(name: "Stocks", source: 1, currency: 0, amount: 1000)
+            Source(name: "Lloyds Bank", source: 0, currency: .pounds, amount: 8000),
+            Source(name: "Chase Bank", source: 0, currency: .dollars, amount: 120000),
+            Source(name: "Stocks", source: 1, currency: .dollars, amount: 1000)
         ]
         let viewFactory = ViewFactory(serviceFactory: ServiceFactory(),
                                       apiServiceFactory: APIServiceFactory())
