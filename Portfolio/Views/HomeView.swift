@@ -29,7 +29,7 @@ struct HomeView: View {
     }
 
     var sourcesSection: some View {
-      Section {
+      List {
         ForEach(viewModel.sources, id: \.name) { source in
             SourceRow(viewModel: SourceRowViewModel(source: source))
         }
@@ -46,6 +46,12 @@ struct HomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel(sourceAPIService: MockSourceAPIService()))
+        let mockSourceAPIService = MockSourceAPIService()
+        mockSourceAPIService.sourcesResponse = [
+            Source(name: "Lloyds Bank", source: 0, currency: 0, amount: 8000),
+            Source(name: "Chase Bank", source: 0, currency: 0, amount: 120000),
+            Source(name: "Stocks", source: 1, currency: 0, amount: 1000)
+        ]
+        return HomeView(viewModel: HomeViewModel(sourceAPIService: mockSourceAPIService))
     }
 }
