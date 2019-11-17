@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    private var viewFactory: ViewControllerFactory
+    private var viewFactory: ViewFactory
 
     @ObservedObject private var viewModel: HomeViewModel
 
-    init(viewModel: HomeViewModel, viewFactory: ViewControllerFactory) {
+    init(viewModel: HomeViewModel, viewFactory: ViewFactory) {
         self.viewModel = viewModel
         self.viewFactory = viewFactory
     }
@@ -58,7 +58,7 @@ struct ContentView_Previews: PreviewProvider {
             Source(name: "Chase Bank", source: 0, currency: 0, amount: 120000),
             Source(name: "Stocks", source: 1, currency: 0, amount: 1000)
         ]
-        let viewFactory = ViewControllerFactory(serviceFactory: ServiceFactory(),
+        let viewFactory = ViewFactory(serviceFactory: ServiceFactory(),
                                                 apiServiceFactory: APIServiceFactory())
         return HomeView(viewModel: HomeViewModel(sourceAPIService: mockSourceAPIService),
                         viewFactory: viewFactory)

@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private lazy var apiServiceFactory: APIServiceFactory = {
         return APIServiceFactory()
     }()
-    private lazy var viewControllerFactory: ViewControllerFactory = {
-        return ViewControllerFactory(serviceFactory: serviceFactory, apiServiceFactory: apiServiceFactory)
+    private lazy var viewControllerFactory: ViewFactory = {
+        return ViewFactory(serviceFactory: serviceFactory, apiServiceFactory: apiServiceFactory)
     }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

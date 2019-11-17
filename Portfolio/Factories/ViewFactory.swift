@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-final class ViewControllerFactory {
+final class ViewFactory {
     private let serviceFactory: ServiceFactory
     private let apiServiceFactory: APIServiceFactory
 

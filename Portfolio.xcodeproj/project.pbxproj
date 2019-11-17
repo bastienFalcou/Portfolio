@@ -10,7 +10,7 @@
 		1320FE53237787BF00195347 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE52237787BF00195347 /* ServiceFactory.swift */; };
 		1320FE55237787CD00195347 /* APIServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE54237787CD00195347 /* APIServiceFactory.swift */; };
 		1320FE572377898E00195347 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE562377898E00195347 /* HomeViewModel.swift */; };
-		1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5923778AC000195347 /* ViewControllerFactory.swift */; };
+		1320FE5A23778AC000195347 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5923778AC000195347 /* ViewFactory.swift */; };
 		1320FE5C23778EE000195347 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5B23778EE000195347 /* UserService.swift */; };
 		1320FE5E23778EEC00195347 /* PortfolioUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5D23778EEC00195347 /* PortfolioUserService.swift */; };
 		1320FE6023778F0E00195347 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* File.swift */; };
@@ -56,7 +56,7 @@
 		1320FE52237787BF00195347 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		1320FE54237787CD00195347 /* APIServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceFactory.swift; sourceTree = "<group>"; };
 		1320FE562377898E00195347 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		1320FE5923778AC000195347 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		1320FE5923778AC000195347 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		1320FE5B23778EE000195347 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1320FE5D23778EEC00195347 /* PortfolioUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUserService.swift; sourceTree = "<group>"; };
 		1320FE5F23778F0E00195347 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			children = (
 				1320FE52237787BF00195347 /* ServiceFactory.swift */,
 				1320FE54237787CD00195347 /* APIServiceFactory.swift */,
-				1320FE5923778AC000195347 /* ViewControllerFactory.swift */,
+				1320FE5923778AC000195347 /* ViewFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 				1320FE572377898E00195347 /* HomeViewModel.swift in Sources */,
 				1372F9D8236F972400FF0D86 /* PortfolioAPIClient.swift in Sources */,
 				1372F9C1236F6BFA00FF0D86 /* SourceAPIService.swift in Sources */,
-				1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */,
+				1320FE5A23778AC000195347 /* ViewFactory.swift in Sources */,
 				1338CE752380CDDB001F952E /* SourceDetailsView.swift in Sources */,
 				1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */,
 				1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */,
