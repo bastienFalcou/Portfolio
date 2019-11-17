@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import Combine
 
 protocol SourceAPIService {
-    func getPortfolioSources(completion: @escaping ((Result<[Source]>) -> Void))
+    @discardableResult
+    func getPortfolioSources() -> AnyPublisher<[Source], Error>
 }

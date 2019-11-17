@@ -7,22 +7,24 @@
 //
 
 import Foundation
+import Combine
+import SwiftUI
 
-final class HomeViewModel {
+final class HomeViewModel: ObservableObject, Identifiable {
     private let sourceAPIService: SourceAPIService
+    private var disposables = Set<AnyCancellable>()
 
-    var sources: [Source] = []
+    @Published private(set) var sources: [Source] = []
 
     init(sourceAPIService: SourceAPIService) {
         self.sourceAPIService = sourceAPIService
     }
 
     func fetchSources() {
-        sourceAPIService.getPortfolioSources { [weak self] result in
-            switch result {
-            case .failure(let error): print(error)
-            case .success(let value): self?.sources = value
-            }
-        }
+        sourceAPIService.getPortfolioSources()
+            .receive(on: DispatchQueue.main)
+            .catch { _ in Just([]) }
+            .assign(to: \.sources, on: self)
+            .store(in: &disposables)
     }
 }

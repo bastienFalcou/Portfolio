@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 final class PortfolioSourceAPIService: SourceAPIService {
     private let apiClient: APIClient
@@ -15,13 +16,16 @@ final class PortfolioSourceAPIService: SourceAPIService {
         self.apiClient = apiClient
     }
 
-    func getPortfolioSources(completion: @escaping ((Result<[Source]>) -> Void)) {
-        apiClient.perform(request: .get, path: "58330c105dd8adce733706f73b707cf4/raw/ec97563a3f39c02b6390307a93ec529f5d26fbe7/portfolio-example.json", properties: nil) { (result: Result<SourcesContainer>) in
-            switch result {
-            case .success(let value): completion(.success(value: value.sources))
-            case .failure(let error): completion(.failure(error: error))
-            }
-        }
+    @discardableResult
+    func getPortfolioSources() -> AnyPublisher<[Source], Error> {
+        let publisher: AnyPublisher<SourcesContainer, Error> = apiClient.perform(
+            request: .get,
+            path: "58330c105dd8adce733706f73b707cf4/raw/ec97563a3f39c02b6390307a93ec529f5d26fbe7/portfolio-example.json",
+            properties: nil
+        )
+        return publisher
+            .map { $0.sources }
+            .eraseToAnyPublisher()
     }
 }
 
