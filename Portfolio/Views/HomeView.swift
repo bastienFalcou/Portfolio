@@ -24,6 +24,8 @@ struct ContentView: View {
             }
         }
         .padding()
+        .navigationBarTitle("Portfolio")
+        .onAppear(perform: viewModel.fetchSources)
     }
 
     var emptySection: some View {
