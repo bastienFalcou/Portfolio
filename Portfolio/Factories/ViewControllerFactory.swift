@@ -17,8 +17,8 @@ final class ViewControllerFactory {
         self.apiServiceFactory = apiServiceFactory
     }
 
-    public func home() -> ContentView {
+    public func home() -> HomeView {
         let viewModel = HomeViewModel(sourceAPIService: apiServiceFactory.sourceAPIService)
-        return ContentView(viewModel: viewModel)
+        return HomeView(viewModel: viewModel)
     }
 }

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
 
     init(viewModel: HomeViewModel) {
@@ -28,13 +28,6 @@ struct ContentView: View {
         .onAppear(perform: viewModel.fetchSources)
     }
 
-    var emptySection: some View {
-      Section {
-        Text("No results")
-          .foregroundColor(.gray)
-      }
-    }
-
     var sourcesSection: some View {
       Section {
         ForEach(viewModel.sources, id: \.name) { source in
@@ -42,10 +35,22 @@ struct ContentView: View {
         }
       }
     }
+
+    var loading: some View {
+      Text("Loading Portfolio Sources...")
+        .foregroundColor(.gray)
+    }
+
+    var emptySection: some View {
+      Section {
+        Text("No results")
+          .foregroundColor(.gray)
+      }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: HomeViewModel(sourceAPIService: MockSourceAPIService()))
+        HomeView(viewModel: HomeViewModel(sourceAPIService: MockSourceAPIService()))
     }
 }
