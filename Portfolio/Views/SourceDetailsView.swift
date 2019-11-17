@@ -17,6 +17,7 @@ struct SourceDetailsView: View {
 
     var body: some View {
         SourceRow(viewModel: SourceRowViewModel(source: viewModel.source))
+            .navigationBarTitle(viewModel.source.name)
     }
 }
 
