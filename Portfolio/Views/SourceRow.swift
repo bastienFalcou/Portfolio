@@ -19,11 +19,11 @@ struct SourceRow: View {
     HStack {
       VStack {
         Text(viewModel.source.name)
-
-        HStack {
-            Text("\(viewModel.source.amount)")
-            Text("\(viewModel.source.currency.rawValue)")
-        }
+            .bold()
+            .kerning(1.5)
+            .foregroundColor(.gray)
+        lineSpacing(5)
+        Text("\(viewModel.source.amount.formatted(with: viewModel.source.currency))")
       }
     }
   }
