@@ -22,6 +22,8 @@
 		1338CE6F2380857D001F952E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9C9236F752500FF0D86 /* Source.swift */; };
 		1338CE712380BBFF001F952E /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338CE702380BBFF001F952E /* SourceRow.swift */; };
 		1338CE732380BD2C001F952E /* SourceRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338CE722380BD2C001F952E /* SourceRowViewModel.swift */; };
+		1338CE752380CDDB001F952E /* SourceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338CE742380CDDB001F952E /* SourceDetailsView.swift */; };
+		1338CE772380CE05001F952E /* SourceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338CE762380CE05001F952E /* SourceDetailsViewModel.swift */; };
 		1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99D236F67AD00FF0D86 /* AppDelegate.swift */; };
 		1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */; };
 		1372F9A2236F67AD00FF0D86 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372F9A1236F67AD00FF0D86 /* HomeView.swift */; };
@@ -63,6 +65,8 @@
 		1338CE6B23808148001F952E /* MockSourceAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSourceAPIService.swift; sourceTree = "<group>"; };
 		1338CE702380BBFF001F952E /* SourceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRow.swift; sourceTree = "<group>"; };
 		1338CE722380BD2C001F952E /* SourceRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceRowViewModel.swift; sourceTree = "<group>"; };
+		1338CE742380CDDB001F952E /* SourceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDetailsView.swift; sourceTree = "<group>"; };
+		1338CE762380CE05001F952E /* SourceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceDetailsViewModel.swift; sourceTree = "<group>"; };
 		1372F99A236F67AD00FF0D86 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372F99D236F67AD00FF0D86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1372F99F236F67AD00FF0D86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			children = (
 				1320FE562377898E00195347 /* HomeViewModel.swift */,
 				1338CE722380BD2C001F952E /* SourceRowViewModel.swift */,
+				1338CE762380CE05001F952E /* SourceDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				1372F9A1236F67AD00FF0D86 /* HomeView.swift */,
 				1338CE702380BBFF001F952E /* SourceRow.swift */,
+				1338CE742380CDDB001F952E /* SourceDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				1372F9D8236F972400FF0D86 /* PortfolioAPIClient.swift in Sources */,
 				1372F9C1236F6BFA00FF0D86 /* SourceAPIService.swift in Sources */,
 				1320FE5A23778AC000195347 /* ViewControllerFactory.swift in Sources */,
+				1338CE752380CDDB001F952E /* SourceDetailsView.swift in Sources */,
 				1372F99E236F67AD00FF0D86 /* AppDelegate.swift in Sources */,
 				1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */,
 				1372F9A0236F67AD00FF0D86 /* SceneDelegate.swift in Sources */,
@@ -368,6 +375,7 @@
 				1320FE6023778F0E00195347 /* File.swift in Sources */,
 				1372F9DA236F974600FF0D86 /* Request.swift in Sources */,
 				1372F9D1236F7FE800FF0D86 /* Source+Serialization.swift in Sources */,
+				1338CE772380CE05001F952E /* SourceDetailsViewModel.swift in Sources */,
 				1320FE5E23778EEC00195347 /* PortfolioUserService.swift in Sources */,
 				1320FE622378BD2A00195347 /* LocalPersistenceService.swift in Sources */,
 			);
