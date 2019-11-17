@@ -36,11 +36,6 @@ struct HomeView: View {
       }
     }
 
-    var loading: some View {
-      Text("Loading Portfolio Sources...")
-        .foregroundColor(.gray)
-    }
-
     var emptySection: some View {
       Section {
         Text("No results")
