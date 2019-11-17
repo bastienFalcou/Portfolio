@@ -33,10 +33,18 @@ struct SourceRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             SourceRow(viewModel: SourceRowViewModel(
-                source: Source(name: "Source 1", source: 0, currency: 0, amount: 8000))
+                source: Source(name: "Source Short Name",
+                               source: 0,
+                               currency: 0,
+                               amount: 8000)
+                )
             )
             SourceRow(viewModel: SourceRowViewModel(
-                source: Source(name: "Source 2", source: 1, currency: 0, amount: 10000))
+                source: Source(name: "Source With A Very Long name So Long It goes Out",
+                               source: 1,
+                               currency: 0,
+                               amount: 100000)
+                )
             )
         }
         .previewLayout(.fixed(width: 300, height: 70))
