@@ -38,15 +38,14 @@ struct SourceRow_Previews: PreviewProvider {
                                currency: 0,
                                amount: 8000)
                 )
-            )
+            ).previewLayout(.fixed(width: 200, height: 120))
             SourceRow(viewModel: SourceRowViewModel(
                 source: Source(name: "Source With A Very Long name So Long It goes Out",
                                source: 1,
                                currency: 0,
                                amount: 100000)
                 )
-            )
+            ).previewLayout(.fixed(width: 350, height: 70))
         }
-        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
