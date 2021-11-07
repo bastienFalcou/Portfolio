@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C51825F273860C200C9AA4B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E52381F44E00BB2AFD /* Currency.swift */; };
-		0C518260273860D100C9AA4B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* File.swift */; };
+		0C518260273860D100C9AA4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* User.swift */; };
 		131003E62381F44E00BB2AFD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E52381F44E00BB2AFD /* Currency.swift */; };
 		131003E82381F4DD00BB2AFD /* Currency+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E72381F4DD00BB2AFD /* Currency+Serialization.swift */; };
 		131003EE2381F6E800BB2AFD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003ED2381F6E800BB2AFD /* IntExtensions.swift */; };
@@ -18,7 +18,7 @@
 		1320FE5A23778AC000195347 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5923778AC000195347 /* ViewFactory.swift */; };
 		1320FE5C23778EE000195347 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5B23778EE000195347 /* UserService.swift */; };
 		1320FE5E23778EEC00195347 /* PortfolioUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5D23778EEC00195347 /* PortfolioUserService.swift */; };
-		1320FE6023778F0E00195347 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* File.swift */; };
+		1320FE6023778F0E00195347 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* User.swift */; };
 		1320FE622378BD2A00195347 /* LocalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE612378BD2A00195347 /* LocalPersistenceService.swift */; };
 		1320FE642378BDCF00195347 /* PortfolioLocalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE632378BDCF00195347 /* PortfolioLocalPersistenceService.swift */; };
 		1338CE6C23808148001F952E /* MockSourceAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1338CE6B23808148001F952E /* MockSourceAPIService.swift */; };
@@ -67,7 +67,7 @@
 		1320FE5923778AC000195347 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		1320FE5B23778EE000195347 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1320FE5D23778EEC00195347 /* PortfolioUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioUserService.swift; sourceTree = "<group>"; };
-		1320FE5F23778F0E00195347 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1320FE5F23778F0E00195347 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1320FE612378BD2A00195347 /* LocalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPersistenceService.swift; sourceTree = "<group>"; };
 		1320FE632378BDCF00195347 /* PortfolioLocalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioLocalPersistenceService.swift; sourceTree = "<group>"; };
 		1338CE6B23808148001F952E /* MockSourceAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSourceAPIService.swift; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 		1372F9C8236F751D00FF0D86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1320FE5F23778F0E00195347 /* File.swift */,
+				1320FE5F23778F0E00195347 /* User.swift */,
 				1372F9C9236F752500FF0D86 /* Source.swift */,
 				131003E52381F44E00BB2AFD /* Currency.swift */,
 			);
@@ -402,7 +402,7 @@
 				1320FE5C23778EE000195347 /* UserService.swift in Sources */,
 				1338CE712380BBFF001F952E /* SourceRow.swift in Sources */,
 				1372F9A2236F67AD00FF0D86 /* HomeView.swift in Sources */,
-				1320FE6023778F0E00195347 /* File.swift in Sources */,
+				1320FE6023778F0E00195347 /* User.swift in Sources */,
 				1372F9DA236F974600FF0D86 /* Request.swift in Sources */,
 				1372F9D1236F7FE800FF0D86 /* Source+Serialization.swift in Sources */,
 				1338CE772380CE05001F952E /* SourceDetailsViewModel.swift in Sources */,
@@ -416,7 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1338CE6F2380857D001F952E /* Source.swift in Sources */,
-				0C518260273860D100C9AA4B /* File.swift in Sources */,
+				0C518260273860D100C9AA4B /* User.swift in Sources */,
 				0C51825F273860C200C9AA4B /* Currency.swift in Sources */,
 				1338CE6E2380857A001F952E /* SourceAPIService.swift in Sources */,
 				1372F9B5236F67AF00FF0D86 /* PortfolioTests.swift in Sources */,
