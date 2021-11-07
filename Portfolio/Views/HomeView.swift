@@ -35,7 +35,7 @@ struct HomeView: View {
     var sourcesSection: some View {
       List {
         ForEach(viewModel.sources, id: \.name) { source in
-            NavigationLink(destination: self.viewFactory.sourceDetails(source: source)) {
+            NavigationLink(destination: viewFactory.sourceDetails(source: source)) {
                 SourceRow(viewModel: SourceRowViewModel(source: source))
             }
         }

@@ -16,16 +16,17 @@ struct SourceRow: View {
   }
 
   var body: some View {
-    HStack {
-      VStack {
-        Text(viewModel.source.name)
-            .bold()
-            .kerning(1.5)
-            .foregroundColor(.gray)
-        lineSpacing(5)
-        Text("\(viewModel.source.amount.formatted(with: viewModel.source.currency))")
-      }
-    }
+      Text(viewModel.source.name)
+//    HStack {
+//      VStack {
+//        Text(viewModel.source.name)
+//            .bold()
+//            .kerning(1.5)
+//            .foregroundColor(.gray)
+//        lineSpacing(5)
+//        Text("\(viewModel.source.amount.formatted(with: viewModel.source.currency))")
+//      }
+//    }
   }
 }
 
