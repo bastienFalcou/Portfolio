@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C51825F273860C200C9AA4B /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E52381F44E00BB2AFD /* Currency.swift */; };
+		0C518260273860D100C9AA4B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320FE5F23778F0E00195347 /* File.swift */; };
 		131003E62381F44E00BB2AFD /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E52381F44E00BB2AFD /* Currency.swift */; };
 		131003E82381F4DD00BB2AFD /* Currency+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003E72381F4DD00BB2AFD /* Currency+Serialization.swift */; };
 		131003EE2381F6E800BB2AFD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131003ED2381F6E800BB2AFD /* IntExtensions.swift */; };
@@ -414,6 +416,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1338CE6F2380857D001F952E /* Source.swift in Sources */,
+				0C518260273860D100C9AA4B /* File.swift in Sources */,
+				0C51825F273860C200C9AA4B /* Currency.swift in Sources */,
 				1338CE6E2380857A001F952E /* SourceAPIService.swift in Sources */,
 				1372F9B5236F67AF00FF0D86 /* PortfolioTests.swift in Sources */,
 				1338CE6C23808148001F952E /* MockSourceAPIService.swift in Sources */,
