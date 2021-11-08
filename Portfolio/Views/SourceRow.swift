@@ -15,19 +15,16 @@ struct SourceRow: View {
     self.viewModel = viewModel
   }
 
-  var body: some View {
-      Text(viewModel.source.name)
-//    HStack {
-//      VStack {
-//        Text(viewModel.source.name)
-//            .bold()
-//            .kerning(1.5)
-//            .foregroundColor(.gray)
-//        lineSpacing(5)
-//        Text("\(viewModel.source.amount.formatted(with: viewModel.source.currency))")
-//      }
-//    }
-  }
+    var body: some View {
+      VStack {
+          Text(viewModel.source.name)
+              .bold()
+              .kerning(1.5)
+              .foregroundColor(.gray)
+//          lineSpacing(5)
+//          Text("\(viewModel.source.amount.formatted(with: viewModel.source.currency))")
+      }
+    }
 }
 
 struct SourceRow_Previews: PreviewProvider {
